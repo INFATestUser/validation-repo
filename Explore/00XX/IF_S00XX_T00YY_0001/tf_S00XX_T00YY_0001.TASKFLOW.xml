@@ -1,0 +1,408 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>SrpC18ypmaaa-gt-271311-2025-03-03T06:16:33.723Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_S00XX_T00YY_0001</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>hayato.mitsui@ctc-g.co.jp</types1:CreatedBy>
+      <types1:CreationDate>2025-03-03T06:16:34Z</types1:CreationDate>
+      <types1:ModifiedBy>hayato.mitsui@ctc-g.co.jp</types1:ModifiedBy>
+      <types1:ModificationDate>2025-03-03T06:17:46Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_S00XX_T00YY_0001"
+                   name="tf_S00XX_T00YY_0001"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="データタスク 1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-S0001-T0004-0002-01-01Opk9wR7ujkbvmWixRpmG</option>
+                  </options>
+               </field>
+               <field description="" name="データタスク 2" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-S0001-T0004-0002-02-8HzTXVRfv6Ubm2nFeywK2l</option>
+                  </options>
+               </field>
+               <field description="" name="データタスク 3" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-S0001-T0004-0002-03-2fowAYYbGm6fxpCzDMRgKO</option>
+                  </options>
+               </field>
+               <field description="" name="データタスク 4" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-S0001-T0004-0002-04-3EJZkG4GbGjcxXjXUTOa2c</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="m78vz7ka" targetId="m78vz7lh"/>
+               </start>
+               <eventContainer id="m78vz7lh">
+                  <service id="m78vz7k9">
+                     <title>データタスク 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_S0001_T0004_0002_01</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">01Opk9wR7ujkbvmWixRpmG</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-S0001-T0004-0002-01-01Opk9wR7ujkbvmWixRpmG">temp.データタスク 1</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.データタスク 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.データタスク 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.データタスク 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.データタスク 1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.データタスク 1/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.データタスク 1/inout/gl_param_max_seq_no">gl_param_max_seq_no</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="m78vz7kg" targetId="m78vz7n8"/>
+                  <events>
+                     <catch faultField="temp.データタスク 1/fault"
+                            id="m78vz7lf"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.データタスク 1/fault"
+                            id="m78vz7lg"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="m78vz7n8">
+                  <service id="m78vz7kf">
+                     <title>データタスク 2</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_S0001_T0004_0002_02</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">8HzTXVRfv6Ubm2nFeywK2l</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-S0001-T0004-0002-02-8HzTXVRfv6Ubm2nFeywK2l">temp.データタスク 2</operation>
+                           <operation source="field"
+                                      to="mt-S0001-T0004-0002-02-8HzTXVRfv6Ubm2nFeywK2l/inout[1]/gl_param_max_seq_no">temp.データタスク1[1]/inout[1]/gl_param_max_seq_no</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.データタスク 2/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.データタスク 2/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.データタスク 2/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.データタスク 2/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.データタスク 2/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.データタスク 2/inout/gl_param_max_seq_no">gl_param_max_seq_no</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="m78vz7km" targetId="m78vz7od"/>
+                  <events>
+                     <catch faultField="temp.データタスク 2/fault"
+                            id="m78vz7n6"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.データタスク 2/fault"
+                            id="m78vz7n7"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="m78vz7od">
+                  <service id="m78vz7kl">
+                     <title>データタスク 3</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_S0001_T0004_0002_03</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">2fowAYYbGm6fxpCzDMRgKO</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-S0001-T0004-0002-03-2fowAYYbGm6fxpCzDMRgKO">temp.データタスク 3</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.データタスク 3/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.データタスク 3/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.データタスク 3/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.データタスク 3/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.データタスク 3/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="m78vz7ks" targetId="m78vz7pi"/>
+                  <events>
+                     <catch faultField="temp.データタスク 3/fault"
+                            id="m78vz7ob"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.データタスク 3/fault"
+                            id="m78vz7oc"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="m78vz7pi">
+                  <service id="m78vz7kr">
+                     <title>データタスク 4</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_S0001_T0004_0002_04</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">3EJZkG4GbGjcxXjXUTOa2c</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-S0001-T0004-0002-04-3EJZkG4GbGjcxXjXUTOa2c">temp.データタスク 4</operation>
+                           <operation source="field"
+                                      to="mt-S0001-T0004-0002-04-3EJZkG4GbGjcxXjXUTOa2c/inout[1]/gl_param_max_seq_no">temp.データタスク2[1]/inout[1]/gl_param_max_seq_no</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.データタスク 4/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.データタスク 4/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.データタスク 4/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.データタスク 4/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.データタスク 4/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.データタスク 4/inout/gl_param_max_seq_no">gl_param_max_seq_no</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="m78vz7kt" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.データタスク 4/fault"
+                            id="m78vz7pg"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.データタスク 4/fault"
+                            id="m78vz7ph"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-S0001-T0004-0002-01-01Opk9wR7ujkbvmWixRpmG"
+                              isByCopy="true"
+                              name="mt-S0001-T0004-0002-01-01Opk9wR7ujkbvmWixRpmG">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-S0001-T0004-0002-02-8HzTXVRfv6Ubm2nFeywK2l"
+                              isByCopy="true"
+                              name="mt-S0001-T0004-0002-02-8HzTXVRfv6Ubm2nFeywK2l">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-S0001-T0004-0002-03-2fowAYYbGm6fxpCzDMRgKO"
+                              isByCopy="true"
+                              name="mt-S0001-T0004-0002-03-2fowAYYbGm6fxpCzDMRgKO">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-S0001-T0004-0002-04-3EJZkG4GbGjcxXjXUTOa2c"
+                              isByCopy="true"
+                              name="mt-S0001-T0004-0002-04-3EJZkG4GbGjcxXjXUTOa2c">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>josTz7X9MYfeidDF2YxAWU</types1:GUID>
+      <types1:DisplayName>tf_S00XX_T00YY_0001</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-03-03T08:26:29.793Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
