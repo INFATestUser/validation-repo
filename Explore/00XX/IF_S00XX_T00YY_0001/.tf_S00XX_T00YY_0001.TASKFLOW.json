@@ -1,0 +1,119 @@
+{
+  "objectInfo" : {
+    "id" : "josTz7X9MYfeidDF2YxAWU",
+    "name" : "tf_S00XX_T00YY_0001",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "SrpC18ypmaaa-gt-271311-2025-03-03T06:16:33.723Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-03-03T08:26:30.189Z",
+  "objectRefs" : [ {
+    "id" : "01Opk9wR7ujkbvmWixRpmG",
+    "name" : "mt_S00XX_T00YY_0001_01",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010FKN0Z0000000000LC"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00XX/IF_S00XX_T00YY_0001"
+  }, {
+    "id" : "2fowAYYbGm6fxpCzDMRgKO",
+    "name" : "mt_S00XX_T00YY_0001_03",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010FKN0Z0000000000LE"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00XX/IF_S00XX_T00YY_0001"
+  }, {
+    "id" : "8HzTXVRfv6Ubm2nFeywK2l",
+    "name" : "mt_S00XX_T00YY_0001_02",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010FKN0Z0000000000LD"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00XX/IF_S00XX_T00YY_0001"
+  }, {
+    "id" : "3EJZkG4GbGjcxXjXUTOa2c",
+    "name" : "mt_S00XX_T00YY_0001_04",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010FKN0Z0000000000LF"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00XX/IF_S00XX_T00YY_0001"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
